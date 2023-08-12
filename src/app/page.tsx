@@ -1,24 +1,16 @@
+import Projects from "@/components/Projects";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  //project stuff
   return (
-    <div>
-      Hi! lets get started
-      <ol>
-        <li>make navigation</li>
-        <li>git commit {"->"} push</li>
-        <li>
-          Migrate all contents from legacy personal website *make component for
-          it*
-        </li>
-        <li>git commit {"->"} push</li>
-        <li>convert contents from prev step to different links{"(pages)"}</li>
-        <li>git commit {"->"} push</li>
-        <li>style the page</li>
-        <li>git commit {"->"} push</li>
-        <li>make animations</li>
-        <li>git commit {"->"} push</li>
-      </ol>
+    <div className="relative h-screen bg-yellow-700">
+      <h1 className=" bg-slate-950 text-4xl text-slate-300">Temp nav bar</h1>
+      <h1 className="bg-[#007ACC] text-4xl">Projects</h1>
+      <div className="flex items-center">
+        <Projects />
+      </div>
     </div>
   );
 }
