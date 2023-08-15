@@ -75,7 +75,10 @@ function Projects() {
         </div>
       );
       return (
-        <div className="bg-slate-500 w-full space-x-10 flex row h-4/5">
+        <div
+          key={idx}
+          className="bg-slate-500 w-full space-x-10 flex row h-4/5"
+        >
           {idx % 2 === 0 ? (
             <>
               {image} {description}
