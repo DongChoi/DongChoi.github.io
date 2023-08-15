@@ -60,7 +60,7 @@ function Projects() {
     const projectsJSX = projectKeys.map((projectName, idx) => {
       const image = (
         <Image
-          className="w-1/2 rounded"
+          className="w-1/2 mx-5 rounded-md"
           src={projects[projectName].imagePath}
           width={500}
           height={500}
@@ -68,17 +68,16 @@ function Projects() {
         />
       );
       const description = (
-        <div className="w-1/2 text-2xl">
-          <span>{projects[projectName].title}</span>
-
-          <p>{projects[projectName].description}</p>
+        <div className="w-1/2 mx-5 pl-6 text-2xl rounded-md bg-slate-400 flex flex-col">
+          <span className="mt-5  text-2xl">{projects[projectName].title}</span>
+          <br />
+          <p className="relative  text-xl">
+            {projects[projectName].description}
+          </p>
         </div>
       );
       return (
-        <div
-          key={idx}
-          className="bg-slate-500 w-full space-x-10 flex row h-4/5"
-        >
+        <div key={idx} className="bg-slate-500 py-20 w-full flex row">
           {idx % 2 === 0 ? (
             <>
               {image} {description}
