@@ -5,14 +5,20 @@ function page() {
     <div>
       Hi! lets get started
       <ol>
-        <li>initialize git</li>
-        <li>figure out how to structure different pages for nextjs13</li>
+        <s>
+          <li>initialize git</li>
+        </s>
+        <s>
+          <li>figure out how to structure different pages for nextjs13</li>
+        </s>
         <li>
           <s>
             Migrate all contents from legacy personal website *make component
             for it*
           </s>
-          <p>Migrate photos and redo the whole descriptions</p>
+          <s>
+            <p>Migrate photos and redo the whole descriptions</p>
+          </s>
           <p>Maybe do a dynamic component instead~ or a pull down animation</p>
         </li>
         <li>git commit {"->"} push</li>
