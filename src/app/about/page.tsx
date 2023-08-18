@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="">
+    <div className="relative z-1000">
       <div className="flex items-center justify-center h-screen">
         <Image
           className="w-1/2 mx-5 rounded-md"
