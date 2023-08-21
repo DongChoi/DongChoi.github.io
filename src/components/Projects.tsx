@@ -85,22 +85,26 @@ function Projects() {
 
     const projectsJSX = projectKeys.map((projectName, idx) => {
       const image = (
-        <Image
-          className="w-1/2 mx-5 rounded-md"
-          src={projects[projectName].imagePath}
-          width={500}
-          height={500}
-          alt={projects[projectName].title}
-        />
+        <div className="md:w-1/2 mb-4 md:mx-5">
+          <Image
+            className="rounded-md"
+            src={projects[projectName].imagePath}
+            width={1000}
+            height={1000}
+            alt={projects[projectName].title}
+            layout="responsive"
+          />
+        </div>
       );
+      /* TODO: get ready for mobile responsive design */
       const description = (
-        <div className="w-1/2 mx-5 px-6 text-2xl rounded-md bg-slate-400 flex flex-col">
+        <div className="md:w-1/2 mb-4 md:mx-5 px-6 text-2xl rounded-md bg-slate-400 flex flex-col">
           <span className="mt-5  text-2xl">{projects[projectName].title}</span>
           <br />
           <p className="relative  text-xl">
             {projects[projectName].description}
           </p>
-          <div>
+          <div className="flex mt-5 justify-center space-x-5">
             <LinkButton
               buttonText={"Github"}
               url={projects[projectName].github}
@@ -115,7 +119,10 @@ function Projects() {
         </div>
       );
       return (
-        <div key={idx} className="bg-slate-500 z-10 py-20 w-full flex row">
+        <div
+          key={idx}
+          className="bg-slate-500 z-10 md:py-20 w-full flex flex-col md:flex-row"
+        >
           {idx % 2 === 0 ? (
             <>
               {image} {description}
