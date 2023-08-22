@@ -85,26 +85,31 @@ function Projects() {
 
     const projectsJSX = projectKeys.map((projectName, idx) => {
       const image = (
-        <div className="md:w-1/2 mb-4 md:mx-5">
+        <div className={`w-1/2 ${idx % 2 === 0 ? "pl-2.5" : "pr-2.5"}`}>
           <Image
             className="rounded-md"
             src={projects[projectName].imagePath}
             width={1000}
             height={1000}
             alt={projects[projectName].title}
-            layout="responsive"
+            // layout="responsive"
           />
         </div>
       );
       /* TODO: get ready for mobile responsive design */
       const description = (
-        <div className="md:w-1/2 mb-4 md:mx-5 px-6 text-2xl rounded-md bg-slate-400 flex flex-col">
+        <div
+          className={`flex-1 text-2xl px-5 rounded-md bg-slate-400 flex flex-col ${
+            idx % 2 === 0 ? "mr-2.5" : "ml-2.5"
+          }`}
+        >
+          {" "}
           <span className="mt-5  text-2xl">{projects[projectName].title}</span>
           <br />
           <p className="relative  text-xl">
             {projects[projectName].description}
           </p>
-          <div className="flex mt-5 justify-center space-x-5">
+          <div className="flex mt-5 justify-center">
             <LinkButton
               buttonText={"Github"}
               url={projects[projectName].github}
@@ -121,17 +126,12 @@ function Projects() {
       return (
         <div
           key={idx}
-          className="bg-slate-500 z-10 md:py-20 w-full flex flex-col md:flex-row"
+          className={`md:py-20 w-full flex md:flex flex-wrap ${
+            idx % 2 === 0 ? "md:flex-row-reverse" : ""
+          }`}
         >
-          {idx % 2 === 0 ? (
-            <>
-              {image} {description}
-            </>
-          ) : (
-            <>
-              {description} {image}
-            </>
-          )}
+          {image}
+          {description}
         </div>
       );
     });
@@ -139,7 +139,12 @@ function Projects() {
   };
   const projectsJSX = populateProjects();
 
-  return <div className="">{projectsJSX}</div>;
+  return (
+    <div className="bg-slate-500 px-5 flex flex-col">
+      <span className="mt-10 text-4xl text-center">Projects</span>
+      {projectsJSX}
+    </div>
+  );
 }
 
 export default Projects;
