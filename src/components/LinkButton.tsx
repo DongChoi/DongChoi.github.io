@@ -9,8 +9,12 @@ const LinkButton = ({
   buttonText: string;
 }) => {
   return (
-    <Link legacyBehavior href="https://example.com" passHref>
-      <a target="_blank" rel="noreferrer noopener">
+    <Link legacyBehavior href={url} passHref>
+      <a
+        className="border-4 px-4 py-2 border-slate-200"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         {buttonText}
       </a>
     </Link>

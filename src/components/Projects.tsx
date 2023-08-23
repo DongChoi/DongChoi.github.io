@@ -9,9 +9,9 @@ const projects: Record<string, Project> = {
     title: "The Core Loop",
     imagePath: "/projects/pic10.png",
     description:
-      "Level up your gaming dreams! This application unites developers, designers, and players on a platform inspired by Product Hunt,empowering enthusiasts to unveil, explore, and elevate gaming projectswhile staying ahead of industry trends.",
+      " This app brings devs, designers, and players together, like a gaming-inspired Product Hunt. Elevate projects, explore, and stay ahead in gaming trends.",
     github: "https://github.com/0xfrian/thecoreloop",
-    websiteUrl: "https://thoecoreloop.gg/",
+    websiteUrl: "https://thecoreloop.gg/",
   },
   productiver: {
     description:
@@ -55,7 +55,7 @@ const projects: Record<string, Project> = {
   },
   Jobly: {
     description:
-      "An app with registration, login, and job application features, focusing on test-driven development to attain a high 99.95% test coverage. GitHub repository showcases the project's details, including building, running, and testing instructions.",
+      "An app with registration, login, and job application features, using test-driven development to attain a high 99.95% test coverage.",
     imagePath: "/projects/pic01.png",
     title: "Jobly",
     github: "https://github.com/DongChoi/jobly",
@@ -85,7 +85,9 @@ function Projects() {
 
     const projectsJSX = projectKeys.map((projectName, idx) => {
       const image = (
-        <div className={`w-1/2 ${idx % 2 === 0 ? "pl-2.5" : "pr-2.5"}`}>
+        <div
+          className={` lg:w-1/2 ${idx % 2 === 0 ? "lg:pl-2.5" : "lg:pr-2.5"}`}
+        >
           <Image
             className="rounded-md"
             src={projects[projectName].imagePath}
@@ -99,17 +101,19 @@ function Projects() {
       /* TODO: get ready for mobile responsive design */
       const description = (
         <div
-          className={`flex-1 text-2xl px-5 rounded-md bg-slate-400 flex flex-col ${
-            idx % 2 === 0 ? "mr-2.5" : "ml-2.5"
+          className={`mt-10 lg:mt-0 flex-1 px-5 rounded-md bg-slate-700 flex flex-col ${
+            idx % 2 === 0 ? "lg:mr-2.5" : "lg:ml-2.5"
           }`}
         >
           {" "}
-          <span className="mt-5  text-2xl">{projects[projectName].title}</span>
+          <span className="mt-5 text-center bg-clip-text text-transparent  bg-gradient-to-r from-purple-950 to-yellow-900 font-semibold text-4xl">
+            {projects[projectName].title}
+          </span>
           <br />
-          <p className="relative  text-xl">
+          <p className="px-2 md:text-lg xl:text-xl">
             {projects[projectName].description}
           </p>
-          <div className="flex mt-5 justify-center">
+          <div className="flex mb-4 space-x-10 mt-10 justify-center">
             <LinkButton
               buttonText={"Github"}
               url={projects[projectName].github}
@@ -126,7 +130,7 @@ function Projects() {
       return (
         <div
           key={idx}
-          className={`md:py-20 w-full flex md:flex flex-wrap ${
+          className={`py-5 h-screen lg:h-auto lg:py-10 w-full flex md:flex flex-wrap ${
             idx % 2 === 0 ? "md:flex-row-reverse" : ""
           }`}
         >
@@ -140,7 +144,7 @@ function Projects() {
   const projectsJSX = populateProjects();
 
   return (
-    <div className="bg-slate-500 px-5 flex flex-col">
+    <div className="lg:px-5 flex flex-col">
       <span className="mt-10 text-4xl text-center">Projects</span>
       {projectsJSX}
     </div>
