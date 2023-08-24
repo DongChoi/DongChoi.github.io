@@ -4,7 +4,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="flex flex-col md:flex-row relative w-screen">
-      <div className="md:w-1/2 flex justify-center relative bg-blue-500">
+      <div className="md:w-1/2 flex justify-center relative bg-black">
         <Image
           className="md:mx-5 rounded-md"
           src="/profile/profile_pic.jpg"
@@ -15,7 +15,9 @@ const About = () => {
         />
       </div>
       <div className="h-screen md:w-1/2 p-5 flex flex-col justify-center md:h-auto bg-[#111111]">
-        <span className="text-2xl font-semibold text-purple-500">About</span>
+        <span className="text-2xl font-semibold bg-clip-text bg-gradient-to-r text-transparent  from-purple-400 to-yellow-200">
+          About
+        </span>
         {/*animate this so that there are many different titles. 
         Campaign Manager -> Behavior Technician -> Parent Consultant -> Insurance Adjuster ->  Software Engineer */}
         <br />

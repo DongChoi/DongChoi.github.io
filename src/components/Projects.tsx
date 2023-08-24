@@ -106,7 +106,7 @@ function Projects() {
           }`}
         >
           {" "}
-          <span className="mt-5 text-center bg-clip-text text-transparent  bg-gradient-to-r from-purple-950 to-yellow-900 font-semibold text-4xl">
+          <span className="mt-5 text-center bg-clip-text text-transparent  bg-gradient-to-r from-purple-700 to-yellow-200 font-semibold text-4xl">
             {projects[projectName].title}
           </span>
           <br />
@@ -130,7 +130,7 @@ function Projects() {
       return (
         <div
           key={idx}
-          className={`py-5 h-screen lg:h-auto lg:py-10 w-full flex md:flex flex-wrap ${
+          className={`py-5  lg:h-auto lg:py-10 w-full flex md:flex flex-wrap ${
             idx % 2 === 0 ? "md:flex-row-reverse" : ""
           }`}
         >
