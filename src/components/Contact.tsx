@@ -70,8 +70,8 @@ function Contact() {
           >
             <Image
               src="/profile/linkedin.svg"
-              width={20}
-              height={20}
+              width={25}
+              height={25}
               layout="fixed"
               alt="logo"
             />
@@ -85,8 +85,8 @@ function Contact() {
           >
             <Image
               src="/profile/github.svg"
-              width={22}
-              height={22}
+              width={25}
+              height={25}
               alt="github logo"
             />
           </a>
@@ -103,8 +103,8 @@ function Contact() {
           >
             <Image
               src="/profile/instagram.svg"
-              width={24}
-              height={24}
+              width={25}
+              height={25}
               alt="IG"
             />
           </a>
