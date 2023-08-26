@@ -106,7 +106,7 @@ function Projects() {
           }`}
         >
           {" "}
-          <span className="mt-5 text-center bg-clip-text text-transparent  bg-gradient-to-r from-purple-700 to-yellow-200 font-semibold text-4xl">
+          <span className="mt-5 text-center bg-clip-text text-transparent  bg-gradient-to-r from-amber-700 to-blue-700 font-semibold text-4xl">
             {projects[projectName].title}
           </span>
           <br />
@@ -144,8 +144,8 @@ function Projects() {
   const projectsJSX = populateProjects();
 
   return (
-    <div className="lg:px-5 flex flex-col">
-      <span className="mt-10 text-4xl text-center">Projects</span>
+    <div id="projects-section" className="lg:px-5 flex flex-col">
+      <span className="mt-4 py-5 font-bold text-4xl text-center">Projects</span>
       {projectsJSX}
     </div>
   );
