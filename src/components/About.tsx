@@ -14,7 +14,7 @@ const About = () => {
           layout="responsive"
         />
       </div>
-      <div className="h-screen md:w-1/2 p-5 flex flex-col justify-center md:h-auto bg-[#111111]">
+      <div className="h-screen md:w-1/2 p-5 flex flex-col justify-center md:h-auto ">
         <span className="text-2xl font-semibold bg-clip-text bg-gradient-to-r text-transparent  from-purple-400 to-yellow-200">
           About
         </span>

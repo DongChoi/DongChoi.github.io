@@ -8,11 +8,11 @@ const Nav = () => {
         <Link href="#projects-section">Works</Link>
       </div>
       <div className=" relative opacity-95 bg-opacity-95">
-        <Link href="https://www.google.com" className="font-semibold">
+        <Link href="#top" className="font-semibold">
           Andrew <span className="font-medium">Choi</span>
         </Link>
       </div>
-      <div className="relative opacity-95 mr-5 bg-opacity-95">About</div>
+      <div className="relative opacity-95 mr-5 bg-opacity-95">Contact</div>
     </div>
   );
 };
