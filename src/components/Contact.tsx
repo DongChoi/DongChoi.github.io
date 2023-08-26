@@ -10,7 +10,7 @@ function Contact() {
   }
 
   return (
-    <div className="bg-slate-700">
+    <div id="contact" className="border-t-2">
       <div className="b  p-6 shadow-md">
         <h2 className="text-2xl text-slate-300 font-semibold mb-4">
           Contact Me
@@ -57,7 +57,7 @@ function Contact() {
         </form>
       </div>
       <div className="text-slate-300 border-t-2 border-white pt-5 pb-4 flex justify-center items-center">
-        &copy; 2023 Andrew Choi{" "}
+        <span className="pr-4">&copy;2023 Andrew Choi</span>
         <Link
           legacyBehavior
           href="https://www.linkedin.com/in/dong-choi"
@@ -70,8 +70,8 @@ function Contact() {
           >
             <Image
               src="/profile/linkedin.svg"
-              width={25}
-              height={25}
+              width={20}
+              height={20}
               layout="fixed"
               alt="logo"
             />
@@ -85,8 +85,8 @@ function Contact() {
           >
             <Image
               src="/profile/github.svg"
-              width={25}
-              height={25}
+              width={22}
+              height={22}
               alt="github logo"
             />
           </a>
@@ -103,8 +103,8 @@ function Contact() {
           >
             <Image
               src="/profile/instagram.svg"
-              width={28}
-              height={28}
+              width={24}
+              height={24}
               alt="IG"
             />
           </a>
