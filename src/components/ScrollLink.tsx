@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Link } from "react-scroll";
 
@@ -8,7 +10,7 @@ interface ScrollLinkProps {
 
 const ScrollLink = ({ to, children }: ScrollLinkProps) => {
   return (
-    <Link to={to} smooth={true} duration={500}>
+    <Link to={to} smooth={true} duration={500} className="cursor-pointer">
       {children}
     </Link>
   );

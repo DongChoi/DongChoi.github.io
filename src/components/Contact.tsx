@@ -10,7 +10,7 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="border-t-2">
+    <div id="contact" className="border-t-2 pt-8">
       <div className="b  p-6 shadow-md">
         <h2 className="text-2xl text-slate-300 font-semibold mb-4">
           Contact Me
@@ -18,7 +18,7 @@ function Contact() {
         <p className="text-slate-300 mb-4">
           If you have any questions or inquiries, feel free to reach out!
         </p>
-        <form className="space-y-4 pb-4" onSubmit={handleSubmit}>
+        <form className="space-y-4 pb-8" onSubmit={handleSubmit}>
           <input
             id="name"
             type="name"

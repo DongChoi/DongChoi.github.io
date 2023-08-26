@@ -144,7 +144,7 @@ function Projects() {
   const projectsJSX = populateProjects();
 
   return (
-    <div id="projects-section" className="lg:px-5 flex flex-col">
+    <div id="projects-section" className="lg:px-5 pb-10 flex flex-col">
       <span className="mt-4 py-5 font-bold text-4xl text-center">Projects</span>
       {projectsJSX}
     </div>
