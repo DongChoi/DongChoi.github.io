@@ -19,8 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <div className="relative">
+      <body className={`${inter.className} bg-black text-slate-100`}>
+        <div className="">
           <Nav />
           <LandingMessage />
           {children}

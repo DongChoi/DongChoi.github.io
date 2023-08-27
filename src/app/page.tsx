@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 export default function Home() {
   //project stuff
   return (
-    <div id="top" className="relative h-screen bg-black">
+    <div id="top" className="relative h-screen">
       <div className="relative items-center ">
         <About />
         <Projects />
