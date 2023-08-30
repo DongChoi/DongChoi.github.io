@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import LinkButton from "./LinkButton";
 
 const projects: Record<string, Project> = {
@@ -80,40 +80,53 @@ interface Project {
 }
 
 function Projects() {
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
+  const handleMouseOver = (projectName: string) => {
+    setHoveredProject(projectName);
+  };
+
+  const handleMouseOut = () => {
+    setHoveredProject(null);
+  };
+
   const populateProjects = () => {
     const projectKeys = Object.keys(projects);
 
     const projectsJSX = projectKeys.map((projectName, idx) => {
       const image = (
-        <div
-          className={` lg:w-1/2 ${idx % 2 === 0 ? "lg:pl-2.5" : "lg:pr-2.5"}`}
-        >
+        <div className="">
           <Image
             className="rounded-md"
             src={projects[projectName].imagePath}
-            width={1000}
-            height={1000}
+            width={2500}
+            height={2500}
             alt={projects[projectName].title}
             // layout="responsive"
           />
         </div>
       );
-      /* TODO: get ready for mobile responsive design */
+      /* TODO: get ready for mobile responsive design
+          - 2560 x 1440 
+      */
       const description = (
         <div
-          className={`mt-10 lg:mt-0 flex-1 px-5 rounded-md bg-slate-700 flex flex-col ${
-            idx % 2 === 0 ? "lg:mr-2.5" : "lg:ml-2.5"
-          }`}
+          className={`absolute h-full lg:mt-0 px-5 rounded-md 
+          bg-slate-700 flex flex-col justify-center 
+          ${projectName == hoveredProject ? "opacity-95" : "opacity-0"}`}
         >
           {" "}
-          <span className="mt-5 text-center bg-clip-text text-transparent  bg-gradient-to-r from-amber-700 to-blue-700 font-semibold text-4xl">
+          <span
+            className="mt-5 text-center bg-clip-text text-transparent  
+          bg-gradient-to-r from-amber-700 to-blue-700 font-semibold text-4xl"
+          >
             {projects[projectName].title}
           </span>
           <br />
           <p className="px-2 md:text-lg xl:text-xl">
             {projects[projectName].description}
           </p>
-          <div className="flex mb-4 space-x-10 mt-10 justify-center">
+          <div className="flex  space-x-10 mt-10 justify-center">
             <LinkButton
               buttonText={"Github"}
               url={projects[projectName].github}
@@ -130,9 +143,10 @@ function Projects() {
       return (
         <div
           key={idx}
-          className={`py-5  lg:h-auto lg:py-10 w-full flex md:flex flex-wrap ${
-            idx % 2 === 0 ? "md:flex-row-reverse" : ""
-          }`}
+          className={`my-5 lg:my-10 
+          relative lg:m-28 md:flex `}
+          onMouseEnter={() => handleMouseOver(projectName)}
+          onMouseLeave={handleMouseOut}
         >
           {image}
           {description}
@@ -145,7 +159,7 @@ function Projects() {
 
   return (
     <div id="projects-section" className="lg:px-5 pb-10 flex flex-col">
-      <span className="mt-4 py-5 font-bold text-4xl text-center">Projects</span>
+      <span className="mt-4 pb-5 pt-20 font-bold text-4xl">Projects</span>
       {projectsJSX}
     </div>
   );

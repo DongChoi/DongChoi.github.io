@@ -4,7 +4,10 @@ import React from "react";
 import ScrollLink from "./ScrollLink";
 const Nav = () => {
   return (
-    <div className="w-screen z-10 flex justify-between py-2 bg-cyan-500/10 backdrop-blur-[2px] fixed text-lg md:text-2xl text-amber-700">
+    <div
+      className="w-screen z-10 flex justify-between py-2 bg-cyan-500/10
+       backdrop-blur-[2px] fixed text-lg md:text-2xl text-purple-500"
+    >
       <div className="relative font-medium  opacity-95 ml-5 bg-opacity-95">
         <ScrollLink to="projects-section">Works</ScrollLink>
       </div>
