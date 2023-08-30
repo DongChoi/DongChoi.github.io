@@ -111,13 +111,15 @@ function Projects() {
       */
       const description = (
         <div
-          className={`absolute h-full lg:mt-0 px-5 rounded-md 
-          bg-slate-700 flex flex-col justify-center 
-          ${projectName == hoveredProject ? "opacity-95" : "opacity-0"}`}
+          className={`absolute w-full h-full lg:mt-0 px-5 rounded-md 
+          bg-slate-700 flex flex-col items-center justify-center 
+          ${
+            projectName == hoveredProject ? "opacity-95 " : "opacity-0"
+          } transition-opacity duration-300 ease-in-out`}
         >
           {" "}
           <span
-            className="mt-5 text-center bg-clip-text text-transparent  
+            className="text-center bg-clip-text text-transparent  
           bg-gradient-to-r from-amber-700 to-blue-700 font-semibold text-4xl"
           >
             {projects[projectName].title}
@@ -126,7 +128,7 @@ function Projects() {
           <p className="px-2 md:text-lg xl:text-xl">
             {projects[projectName].description}
           </p>
-          <div className="flex  space-x-10 mt-10 justify-center">
+          <div className="flex space-x-10 mt-10 justify-center">
             <LinkButton
               buttonText={"Github"}
               url={projects[projectName].github}
@@ -144,7 +146,7 @@ function Projects() {
         <div
           key={idx}
           className={`my-5 lg:my-10 
-          relative lg:m-28 md:flex `}
+          relative flex lg:m-28 `}
           onMouseEnter={() => handleMouseOver(projectName)}
           onMouseLeave={handleMouseOut}
         >
