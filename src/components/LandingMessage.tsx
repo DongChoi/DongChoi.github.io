@@ -15,8 +15,8 @@ const LandingMessage = () => {
           objectFit="cover"
         />
         <div className="absolute font-bold text-4xl lg:inset-y-28  text-center lg:text-8xl">
-          <p className="mb-10 text-violet-500 px-5 pb-3">Exploring</p>
-          <p className="mb-10 text-sky-500 px-5 py-3">New</p>
+          <p className="mb-10 text-rose-500 opacity-60 px-5 pb-3">Exploring</p>
+          <p className="mb-10 text-sky-500 opacity-60 px-5 py-3">New</p>
           <p className="bg-white  p-3 font-bold text-black mix-blend-screen ">
             Technologies
           </p>

@@ -47,7 +47,7 @@ const projects: Record<string, Project> = {
   },
   imageTimecapsule: {
     description:
-      "Heart broken? Can't stop looking at pictures of you two together? Can't bear to delete them? We'll hold onto them for you until you are ready!",
+      "Heart broken? Can't stop looking at pictures of the two of you together? Can't bear to delete them? We'll hold onto them for you until you are ready!",
     imagePath: "/projects/pic03.png",
     title: "Image Time Capsule",
     github: "https://github.com/DongChoi/image-time-capsule-react",
@@ -146,7 +146,7 @@ function Projects() {
         <div
           key={idx}
           className={`my-5 lg:my-10 
-          relative flex lg:m-28 `}
+          relative flex lg:m-16 `}
           onMouseEnter={() => handleMouseOver(projectName)}
           onMouseLeave={handleMouseOut}
         >
@@ -160,8 +160,13 @@ function Projects() {
   const projectsJSX = populateProjects();
 
   return (
-    <div id="projects-section" className="lg:px-5 pb-10 flex flex-col">
-      <span className="mt-4 pb-5 pt-20 font-bold text-4xl">Projects</span>
+    <div id="projects-section" className="pb-10 flex flex-col">
+      <span
+        className="mt-4 pb-20 pt-20 text-center lg:text-left lg:mx-16 font-bold text-4xl
+      bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-sky-500"
+      >
+        Projects
+      </span>
       {projectsJSX}
     </div>
   );
